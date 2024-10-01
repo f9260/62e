@@ -5,11 +5,24 @@ import metotaralik from 'app-images/metot-aralık.jpg'
 import metotaralikrastgele from 'app-images/metot-aralık-rastgele.jpg'
 import metotaraliksirali from 'app-images/metot-aralık-sıralı.jpg'
 import metotaraliksiralisure from 'app-images/metot-aralık-sıralı-süre.jpg'
-
+import { Callout } from 'nextra/components'
 
 The interval method allows for work to be done on entered time intervals.
 
 It has two sub-modes: **Random** and **Regular**.
+
+
+<Callout type="warning" emoji="⚠️">
+  When the Interval method is active, only “minutes and hours” can be entered. 
+  
+  For example, to express the 2nd hour and 15th minute, 2:15 should be written. 
+  To express the 15th minute, only 15 should be written.
+
+  3:21-4:32 refers to the interval between the 21st minute of the 3rd hour and the 32nd minute of the 4th hour.
+
+  4-16 refers to the period between the 4th minute and the 16th minute.
+</Callout>
+ 
 
 <Image src={metotaralik} />
 
@@ -42,7 +55,8 @@ import Link from 'next/link';
 ## Random
 When the Random mode is active, content production is carried out within the entered time intervals for the number of productions written in the "**How Many**" section.
 
-###Example
+### Example
+
 Settings for a 40-minute YouTube video are as follows:
 
 <Image src={metotaralikrastgele} />
@@ -51,7 +65,7 @@ Settings for a 40-minute YouTube video are as follows:
 | URL | youtube.com/video-id |
 | :----- | :----: |
 | How Many| 3 |
-| Intervals | ```2:14-3:21```,```6:16-9:19```,```17:21-24:18```,```34:13-39:21```    |
+| Intervals | ```2-6```,```9-21```,```1:16-1:33```,```2:24-3:17```    |
 | Video Duration/Fixed | 15 |
 | Method | Interval/Random |
 
@@ -61,10 +75,10 @@ Settings for a 40-minute YouTube video are as follows:
 
 | Intervals | Number of Produced Videos |
 | :----- | :----: |
-| 2:14-3:21 | 3 |
-| 6:16-9:19 | 3 |
-| 17:21-24:18 | 3 |
-| 34:13-39:21 | 3 |
+| 2-6 | 3 |
+| 9-21 | 3 |
+| 1:16-1:33 | 3 |
+| 2:24-3:17 | 3 |
 
 
 For each time interval, a total of 3 videos of 15 seconds each are randomly produced.
@@ -110,7 +124,7 @@ Here are the settings for a 40-minute YouTube video:
 
 | URL | youtube.com/video-id |
 | :----- | :----: |
-| Intervals | ```2:14-3:21```,```6:16-9:19```,```17:21-20:18```,```34:13-36:21```    |
+| Intervals | ```2-4```,```9-12```,```1:16-1:18```,```2:24-2:27```    |
 | Video Duration/Fixed | 45 |
 | Method | Interval/Regular  |
 
@@ -120,10 +134,10 @@ Here are the settings for a 40-minute YouTube video:
 
 | Intervals | Production Periods | Number of Produced Videos |
 | :----- | :----: | :----: |
-| 2:14-3:21 | ```2:14-2:59```,```2:59-3:44``` | 2 |
-| 6:16-9:19 | ```6:16-7:01```,```7:01-7:46```,```7:46-8:31```,```8:31-9:16```,```9:16-10:01``` | 5 |
-| 17:21-20:18 | ```17:21-18:06```,```18:06-18:51```,```18:51-19:34```,```19:34-20:19``` | 4 |
-| 34:13-36:21 | ```34:13-34:58```,```34:58-35:43```,```35:43-36:28``` | 3 |
+| 2-4 | ```2:00-2:45```,```2:45-3:30```,```3:30-4:15``` | 3 |
+| 9-12 | ```9:00-9:45```,```9:45-10:30```,```10:30-11:15```,```11:15-12:00```| 4 |
+| 1:16-1:18 | ```1:16:00-1:16:45```,```1:16:45-1:17:30```,```1:17:30-1:18:15``` | 3 |
+| 2:24-2:27 | ```2:24:00-2:24:45```,```2:24:45-2:25:30```,```2:25:30-2:26:15```,```2:26:15-2:27:00``` | 4 |
 
 
 
